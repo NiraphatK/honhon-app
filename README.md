@@ -29,12 +29,12 @@ To clone and run this application, you'll need [Git](https://git-scm.com) and [N
 
 1. **Clone the Repository**
     ```bash
-    git clone https://github.com/NiraphatK/ReactNativeFinalProject.git
+    git clone https://github.com/NiraphatK/honhon-app.git
     ```
    
 2. **Navigate to the Project Directory**
     ```bash
-    cd ReactNativeFinalProject
+    cd honhon-app
     ```
 
 ## Running the App
