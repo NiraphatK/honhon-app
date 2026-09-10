@@ -1,100 +1,137 @@
+# Hon Hon
 
-<h1 align="center">
-  <br>
-  Hon Hon
-  <br>
-</h1>
+**Hon Hon** is a cross-platform focus and reading-time management application built with **React Native**, **Expo**, **Node.js**, and **MongoDB**.
 
-<h4 align="center">An application that helps manage time and increase focus while reading books.</h4>
+The project combines a mobile frontend with a dedicated backend so users can manage focus sessions and persist their activity across sessions.
 
-## Repository Tree
+## Overview
+
+Hon Hon was created to help users stay focused while reading by providing a structured mobile experience around time management and session tracking.
+
+The repository contains both the application source code and academic project documentation from the Hybrid Application Development (ITE-434) course.
+
+## Key features
+
+- Mobile-focused reading and focus workflow
+- Time-management / focus-session experience
+- React Native application built with Expo
+- Dedicated Node.js backend
+- MongoDB-backed persistence
+- Clear separation between frontend and backend projects
+- Project documentation and presentation assets kept alongside the source
+
+## Tech stack
+
+| Area | Technology |
+| --- | --- |
+| Mobile frontend | React Native, Expo |
+| Language | TypeScript / JavaScript |
+| Backend | Node.js, Express |
+| Database | MongoDB |
+| Package management | npm |
+| Development runtime | Nodemon |
+
+## Repository structure
+
+```text
+honhon-app/
+├── Documents/             # Academic project documents and deliverables
+│   ├── Phase 1/
+│   ├── Phase 2/
+│   └── Phase 3/
+└── Hon-Hon-app/
+    ├── frontend/          # React Native / Expo application
+    └── backend/           # Node.js / Express API
 ```
-🐶 Hon Hon
-├─ Documents         # For submitting assignments
-│  ├─ Phase 1
-│  ├─ Phase 2
-│  └─ Phase 3
-└─ Hon-Hon-app       # App source
-   ├─ frontend/      # React Native frontend application
-   └─ backend/       # Node.js backend server
+
+## Getting started
+
+### Prerequisites
+
+Install the following before running the project:
+
+- Git
+- Node.js and npm
+- Expo-compatible development environment
+- Access to a MongoDB database
+
+### Clone the repository
+
+```bash
+git clone https://github.com/NiraphatK/honhon-app.git
+cd honhon-app
 ```
-## Built With
 
-![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![Expo](https://img.shields.io/badge/expo-1C1E24?style=for-the-badge&logo=expo&logoColor=#D04A37) ![NPM](https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white) ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white) ![Nodemon](https://img.shields.io/badge/NODEMON-%23323330.svg?style=for-the-badge&logo=nodemon&logoColor=%BBDEAD) ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white) ![React Native](https://img.shields.io/badge/react_native-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+## Frontend setup
 
-### How To Use
-To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line.
+Navigate to the mobile application:
 
-## Installation
+```bash
+cd Hon-Hon-app/frontend
+```
 
-1. **Clone the Repository**
-    ```bash
-    git clone https://github.com/NiraphatK/honhon-app.git
-    ```
-   
-2. **Navigate to the Project Directory**
-    ```bash
-    cd honhon-app
-    ```
+Install dependencies:
 
-## Running the App
+```bash
+npm install
+```
 
-This project contains two main parts:
-1. **Frontend** - built with React Native and Expo.
-2. **Backend** - built with Node.js and Express.
+Start Expo:
 
-### Frontend Setup
+```bash
+npx expo start
+```
 
-1. Navigate to the frontend directory:
-    ```bash
-    cd Hon-Hon-app/frontend
-    ```
+Use the Expo development tools to open the application on a compatible Android/iOS simulator or physical device.
 
-2. Install dependencies:
-    ```bash
-    npm install
-    ```
+## Backend setup
 
-3. Start the frontend with Expo:
-    ```bash
-    npx expo start
-    ```
+Open another terminal and navigate to the backend:
 
-4. Follow the instructions in the Expo Developer Tools that open in your browser to run the app on an Android or iOS device/simulator.
+```bash
+cd Hon-Hon-app/backend
+```
 
-### Backend Setup
+Install dependencies:
 
-1. Open a new terminal and navigate to the backend directory:
-    ```bash
-    cd Hon-Hon-app/backend
-    ```
+```bash
+npm install
+```
 
-2. Install dependencies:
-    ```bash
-    npm install
-    ```
+Create a `.env` file with the required MongoDB connection and server configuration:
 
-3. Start the backend server:
-    ```bash
-    npm run dev
-    ```
-
-4. Ensure the backend server is running successfully to allow network requests from the frontend.
-
-### Environment Setup
-
-To connect to a MongoDB database, create a `.env` file in the `backend` directory and add the following environment variables:
-
-```plaintext
-# MongoDB URI connection string
+```env
 MONGO_URI=your_mongodb_connection_string
-
-# Port for backend server
 PORT=5000
 ```
----
 
-![Hon-Hon App Poster](https://github.com/Lagedane/ReactNativeFinalProject/blob/main/Documents/Phase%203/Hon%20Hon%20Poster.png)
+Start the development server:
 
----
-> [ITE-434] Final Project &nbsp;&nbsp;
+```bash
+npm run dev
+```
+
+## Architecture
+
+At a high level, Hon Hon follows a simple client/server structure:
+
+```text
+React Native / Expo client
+          |
+          | HTTP API
+          v
+Node.js / Express backend
+          |
+          v
+       MongoDB
+```
+
+Keeping the frontend and backend separated makes the project useful as a practical example of connecting a mobile application to an external API and persistent database.
+
+## Academic background
+
+Hon Hon was developed as a final project for **Hybrid Application Development (ITE-434)**. The repository preserves the original project phases and documentation alongside the implementation.
+
+## Project status
+
+Completed academic project. The codebase is retained as a portfolio and learning reference for React Native, API integration, and MongoDB-backed mobile application development.
